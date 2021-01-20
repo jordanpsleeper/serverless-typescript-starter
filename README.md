@@ -6,3 +6,6 @@ serverless
 typescript
 eslint
 jest
+
+
+`sls create -u https://github.com/jordanpsleeper/serverless-typescript-starter.git -p new-project_name`  
