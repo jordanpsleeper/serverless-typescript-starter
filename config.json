@@ -1,0 +1,8 @@
+{
+  "production": {
+    "hello": "production"
+  },
+  "development": {
+    "hello": "development"
+  }
+}

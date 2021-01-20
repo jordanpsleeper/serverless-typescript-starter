@@ -1,0 +1,19 @@
+service: serverless-typescript-starter
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ${opt:region, 'us-east-1'}
+  stage: ${opt:stage, 'development'}
+  memorySize: 128
+  timeout: 10
+  environment: ${file(config.json):${self:provider.stage}}
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: src/handler.hello
